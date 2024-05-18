@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Age Confirmation</title>
+</head>
+<style>
+    .page{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        background: linear-gradient(135deg, #c3a3f1, #6414e9);
+    }
+    .box{
+        width: 90%;
+        max-width: 34.37em;
+        max-height: 90vh;
+        background-color: white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 3em;
+        border-radius: 1em;
+        box-shadow: 0 4em 5em rgba(27,8,53,0.2);
+        text-align: center;
+    }
+    .rest{
+        text-align: left;
+    }
+</style>
+<body>
+    <div class = "page">
+        <div class = "box">
+            <strong>Name: </strong><%- name_to_insert %>
+            <br>
+            <strong>Age: </strong><%- age %>
+            <br>
+            <strong>Expected Age: </strong><%- expectedAge %>
+            <hr>
+            <strong> Age Difference: </strong><%- ageDifference %>
+            <br>
+            <strong><%- home %></strong>
+            <br>
+        </div>
+    </div>
+    
+</body>
+
+</html>

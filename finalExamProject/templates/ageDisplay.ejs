@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>All Ages</title>
+</head>
+<style>
+    .page{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        background: linear-gradient(135deg, #c3a3f1, #6414e9);
+    }
+    .box{
+        width: 90%;
+        max-width: 34.37em;
+        max-height: 90vh;
+        background-color: white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 3em;
+        border-radius: 1em;
+        box-shadow: 0 4em 5em rgba(27,8,53,0.2);
+        text-align: center;
+        color:black
+    }
+    .rest{
+        color: black;
+        font-size: 64px;
+        text-shadow: 4px 4px 4px #6414e9;
+        animation: bounce 3s infinite ease-in-out;
+    }
+    @keyframes bounce{
+        40%{
+            transform: translateY(-30px) scale(1.0);
+            text-shadow: 0 100px 8px hsla(0,0, 0%,0.5);
+        }
+    }
+</style>
+<body>
+    <div class = "page">
+        <div class = "box">
+            <div class = "rest">
+                <%allAges.forEach(age => { %>
+                    <%= age%>
+                <% });%>
+            </div>
+            <br>
+            <%- home %>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Age Predict</title>
+    <script>
+        window.onsubmit = confirmAge;
+        function confirmAge() {
+            if (window.confirm("Do you confirm that your age information is accurate?")) {
+                return true;
+            } 
+            else {
+                return false;
+            }
+        }
+    </script>
+</head>
+<style>
+    .page{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        background: linear-gradient(135deg, #c3a3f1, #6414e9);
+    }
+    .box{
+        width: 90%;
+        max-width: 34.37em;
+        max-height: 90vh;
+        background-color: white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 3em;
+        border-radius: 1em;
+        box-shadow: 0 4em 5em rgba(27,8,53,0.2);
+        text-align: center;
+    }
+</style>
+<body>
+    <div class= "page">
+        <div class = "box">
+
+            <h1>Age Guesser</h1>
+            <div class = "rest">
+                <form action="/tryPredict" method="post">
+                    <fieldset>
+                        <label>
+                            <strong>Name: </strong>
+                            <input type="text" name="name_to_insert" pattern="[A-Za-z]+" title = "Name must only contain letters" required>
+                        </label>
+                        <label>
+                            <strong>How old are you: </strong>
+                            <input type="number" name="age" pattern="[0-9]+" min= "1" title = "Only numbers are allowed inputs" required>
+                        </label>
+                        
+
+                    </fieldset>
+
+                    <br>
+
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit Information">
+                </form>
+            </div>
+            <br>
+            <%- home %>
+        </div>
+        <hr>
+    </div>
+
+</body>
+
+</html>
